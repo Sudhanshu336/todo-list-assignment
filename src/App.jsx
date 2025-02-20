@@ -78,7 +78,7 @@ function App() {
          <div className="addTodo my-5 flex flex-col gap-4">
           <h2 className='text-lg font-bold'>Add a Todo</h2>
           <input  onChange={handleChange} value={todo} type="text" className='w-full rounded-full px-5 py-1' />
-          <button onClick={handleAdd} disabled={todo.length<=3} className='bg-violet-800 hover:bg-violet-950 disabled:bg-violet-500 p-2 py-1 text-sm font-bold text-white rounded-md'>Save</button>
+          <button onClick={handleAdd} disabled={todo.length<=2} className='bg-violet-800 hover:bg-violet-950 disabled:bg-violet-500 p-2 py-1 text-sm font-bold text-white rounded-md'>Add task</button>
          </div>
          <input className='my-4' onChange={toggleFinished} type="checkbox" checked={showFinished} /> Show Finished
          <h2 className='text-lg font-bold'>Your Todos</h2>
