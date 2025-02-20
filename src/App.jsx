@@ -22,7 +22,9 @@ function App() {
     localStorage.setItem("todos", JSON.stringify(todos))
   }
 
-
+const toggleFinished = (e) => {
+    setshowFinished(!showFinished)
+  }
   
   
 
@@ -77,7 +79,7 @@ function App() {
           <input  onChange={handleChange} value={todo} type="text" className='w-full rounded-full px-5 py-1' />
           <button onClick={handleAdd} disabled={todo.length<=2} className='bg-blue-800 hover:bg-violet-950 disabled:bg-green-500 p-2 py-1 text-sm font-bold text-white rounded-md'>Add task</button>
          </div>
-    
+         <input className='my-4' onChange={toggleFinished} type="checkbox" checked={showFinished} /> Show Finished
          <h2 className='text-lg font-bold'>Your Tasks</h2>
          <div className="todos">
           {todos.length ===0 && <div className='m-5'>No Tasks to display</div> }
